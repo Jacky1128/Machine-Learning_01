@@ -94,15 +94,15 @@ x = np.linspace(data.Population.min(), data.Population.max(), 100)  # Set horizo
 f = g[0, 0] + (g[0, 1] * x)     # Set vertical ordinates(profit)
 
 fig, ax = plt.subplots(figsize=(12,8))
-ax.plot(x, f, 'r', label='Prediction')
-ax.scatter(data.Population, data.Profit, label='Traning Data')
-ax.legend(loc=2)
+ax.plot(x, f, 'r', label='Prediction')     # H-O with x, V-O with f, 'r' means red colour, the name of this line is 'Prediction'
+ax.scatter(data.Population, data.Profit, label='Traning Data')      # Show the scatter of traning data
+ax.legend(loc=2)    # NOTICE: legend() have a parameter-loc, in order to control the location of legend(图例)
+# example: plot.legend(loc=2), means第二象项(左上角)。loc can be set as 1,2,3,4
 ax.set_xlabel('Population')
-ax.set_ylabel('Profit')
-ax.set_title('Predicted Profit vs. Population Size')
+ax.set_ylabel('Profit')     # Name x&y label
+ax.set_title('Predicted Profit vs. Population Size')    # Name title of the figure
 plt.show()
-#原始数据以及拟合的直线
-
+# draw data graph
 
 
 

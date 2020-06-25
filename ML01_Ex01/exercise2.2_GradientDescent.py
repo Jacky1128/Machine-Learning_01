@@ -23,19 +23,20 @@ data.insert(0, 'Ones', 1)   # means column No.0, named as 'Ones', all valued as 
 
 ## STEP_02: Initialize the matrix X and y
 cols = data.shape[1]    # use method shape[] to get the shape of the matrix;
-# NOTICE:在矩阵中，[0]就表示行数，[1]则表示列数。因此data.shape[1]表实读取data这个矩阵的宽度；
+# NOTICE: in matrix, [0] means the num of rows, [1] means the num of cols;
+# data.shape[1] means get width of the matrix-data
 
-X = data.iloc[:, :-1]   # means: 任意行，从列索引0到倒数第二列，即X剔除了data set中y的那一列
-y = data.iloc[:, cols - 1:cols]     # means: 任意行，只取最后一列，即y只取data set中y的那一列
+X = data.iloc[:, :-1]   # means: random rows, from col-index0 to last but 1(倒数第2列,即X剔除了data set中y的那一列)
+y = data.iloc[:, cols - 1:cols]     # means: random rows, only get the last col(y只取data set中y的那一列)
 # NOTICE:iloc 是基于“位置”的Dataframe操作，基于整数的下标来进行数据定位/选择；语法data.iloc[<row selection>, <column selection>]
 
 
-## STEP_03: Inspect whether the matrix X (training set) and y (目标变量) are correct or not
+## STEP_03: Inspect whether the matrix X (training set) and y (target variable) are correct or not
 print(X.head())    # the method head() only get first 5 rows
 print(y.head())
 
 ## STEP04: cost function can just operate numpy matrix, so here we change the form of X&y, then initialize theta
-# NOTICE:numpy.matrix(data,dtype,copy):返回一个矩阵，dtype:为data的type；copy:为bool类型
+# NOTICE:numpy.matrix(data,dtype,copy): return a matrix, dtype:data's type；copy is bool type
 X = np.matrix(X.values)
 y = np.matrix(y.values)
 theta = np.matrix(np.array([0,0]))
@@ -52,12 +53,12 @@ print(computeCost(X,y,theta))
 # NOTICE: The var of J(θ)isθ, not X or y. It means the guidline is we update the value of θ to update J(θ);
 # How to inspect if the algorithm is well-operating: Print the value of J(θ) in each step.
 # then see if it is decreasing and converge to a stable value.
-# The final result will be used to predict "小吃店在35000及70000人城市规模的利润"
+# The final result will be used to predict the profit of food stand in 2 cities with 35000 & 70000 scale respectively
 
 def gradientDescent(X, y, theta, alpha, iters):     # The defination of Batch Gradient Descent algorithm
     temp = np.matrix(np.zeros(theta.shape))     # Initialize a matrix filled with 0 (same scale with theta matrix)
-    #NOTICE: 用法：zeros(shape, dtype=float, order='C')
-    #返回来一个给定形状和类型的用0填充的数组；
+    #NOTICE: zeros(shape, dtype=float, order='C')
+    #Return a all-zero array given particular shape and type
 
     parameters = int(theta.ravel().shape[1])    # the number of parameter-θ
     cost = np.zeros(iters)  # Initialize an array containing the value of J(θ) in each iteration
@@ -67,7 +68,7 @@ def gradientDescent(X, y, theta, alpha, iters):     # The defination of Batch Gr
 
         for j in range(parameters):
             term = np.multiply(error, X[:, j])  # iteration step of θj, same as part of the iteration fomular
-            # NOTICE: method multiply():数组和矩阵对应位置相乘，输出与相乘数组/矩阵的大小一致
+            # NOTICE: method multiply():array and matrix 对应位置相乘
             temp[0, j] = theta[0, j] - ((alpha / len(X)) * np.sum(term))    # same as the iteration fomular
 
         theta = temp    # same as the iteration fomular
@@ -96,7 +97,7 @@ f = g[0, 0] + (g[0, 1] * x)     # Set vertical ordinates(profit)
 fig, ax = plt.subplots(figsize=(12,8))
 ax.plot(x, f, 'r', label='Prediction')     # H-O with x, V-O with f, 'r' means red colour, the name of this line is 'Prediction'
 ax.scatter(data.Population, data.Profit, label='Traning Data')      # Show the scatter of traning data
-ax.legend(loc=2)    # NOTICE: legend() have a parameter-loc, in order to control the location of legend(图例)
+ax.legend(loc=2)    # NOTICE: legend() have a parameter-loc, in order to control the location of legend
 # example: plot.legend(loc=2), means第二象项(左上角)。loc can be set as 1,2,3,4
 ax.set_xlabel('Population')
 ax.set_ylabel('Profit')     # Name x&y label
@@ -104,7 +105,7 @@ ax.set_title('Predicted Profit vs. Population Size')    # Name title of the figu
 plt.show()
 # draw data graph
 
-
+# End
 
 
 

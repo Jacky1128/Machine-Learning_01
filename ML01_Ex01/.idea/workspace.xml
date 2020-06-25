@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c2baa3c1-6371-40a0-9d10-1ee28f2722aa" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/exercise2.2_GradientDescent.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="1dnMkzVg0MoRvIvDUM7N8JN4OJI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RunManager" selected="Python.exercise2.2_GradientDescent">
+    <configuration name="exercise01" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="project02" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="exercise2.1_PlottingData" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="project02" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exerciese2.1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="exercise2.2_GradientDescent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="project02" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exercise2.2_GradientDescent.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.exercise2.2_GradientDescent" />
+        <item itemvalue="Python.exercise2.1_PlottingData" />
+        <item itemvalue="Python.exercise01" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2baa3c1-6371-40a0-9d10-1ee28f2722aa" name="Default Changelist" comment="" />
+      <created>1593056550571</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593056550571</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#Inspections" timestamp="1593057229801">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1593057229801" />
+    <state x="491" y="31" key="#demo" timestamp="1593057002633">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="491" y="31" key="#demo/0.0.1536.824@0.0.1536.824" timestamp="1593057002633" />
+    <state x="491" y="31" key="#exerciese2.1" timestamp="1593065050426">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="491" y="31" key="#exerciese2.1/0.0.1536.824@0.0.1536.824" timestamp="1593065050426" />
+    <state x="491" y="31" key="#exercise01" timestamp="1593057007883">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="491" y="31" key="#exercise01/0.0.1536.824@0.0.1536.824" timestamp="1593057007883" />
+    <state width="1515" height="99" key="GridCell.Tab.0.bottom" timestamp="1593072481988">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="99" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593072481988" />
+    <state width="1515" height="99" key="GridCell.Tab.0.center" timestamp="1593072481988">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="99" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593072481988" />
+    <state width="1515" height="99" key="GridCell.Tab.0.left" timestamp="1593072481988">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="99" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593072481988" />
+    <state width="1515" height="99" key="GridCell.Tab.0.right" timestamp="1593072481988">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="99" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593072481988" />
+    <state x="277" y="55" key="SettingsEditor" timestamp="1593065302439">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1593065302439" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1593064958785">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1593064958785" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1593070929048">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1593070929048" />
+  </component>
+</project>

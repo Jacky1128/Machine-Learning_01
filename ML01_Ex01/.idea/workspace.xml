@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2baa3c1-6371-40a0-9d10-1ee28f2722aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/exercise3_MultivarLinearRegression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercise2.2_GradientDescent.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercise2.2_GradientDescent.py" afterDir="false" />
-    </list>
+    <list default="true" id="c2baa3c1-6371-40a0-9d10-1ee28f2722aa" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ML01_Ex02" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunManager" selected="Python.exercise3_MultivarLinearRegression">
@@ -166,6 +162,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="491" y="31" key="#exercise2.2_GradientDescent/0.0.1536.824@0.0.1536.824" timestamp="1593092461460" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1593180153196">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1593180153196" />
     <state width="1537" height="123" key="GridCell.Tab.0.bottom" timestamp="1593148341685">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -186,10 +186,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1593065302439" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1593146822778">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1593180141796">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1593146822778" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1593180141796" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1593070929048">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

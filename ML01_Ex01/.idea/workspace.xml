@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2baa3c1-6371-40a0-9d10-1ee28f2722aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercise3_MultivarLinearRegression.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercise2.2_GradientDescent.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercise2.2_GradientDescent.py" afterDir="false" />
     </list>
@@ -23,6 +23,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/exercise2.2_GradientDescent.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/exercise3_MultivarLinearRegression.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1dnMkzVg0MoRvIvDUM7N8JN4OJI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -37,7 +38,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
-  <component name="RunManager" selected="Python.exercise2.2_BatchGradientDescent">
+  <component name="RunManager" selected="Python.exercise3_MultivarLinearRegression">
     <configuration name="exercise01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="project02" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,8 +102,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="exercise3_MultivarLinearRegression" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="project02" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exercise3_MultivarLinearRegression.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.exercise3_MultivarLinearRegression" />
         <item itemvalue="Python.exercise2.2_BatchGradientDescent" />
         <item itemvalue="Python.exercise2.1_PlottingData" />
         <item itemvalue="Python.exercise01" />
@@ -143,30 +166,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="491" y="31" key="#exercise2.2_GradientDescent/0.0.1536.824@0.0.1536.824" timestamp="1593092461460" />
-    <state width="1515" height="84" key="GridCell.Tab.0.bottom" timestamp="1593092466968">
+    <state width="1537" height="123" key="GridCell.Tab.0.bottom" timestamp="1593148341685">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="84" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593092466968" />
-    <state width="1515" height="84" key="GridCell.Tab.0.center" timestamp="1593092466968">
+    <state width="1537" height="123" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593148341685" />
+    <state width="1537" height="123" key="GridCell.Tab.0.center" timestamp="1593148341685">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="84" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593092466968" />
-    <state width="1515" height="84" key="GridCell.Tab.0.left" timestamp="1593092466968">
+    <state width="1537" height="123" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593148341685" />
+    <state width="1537" height="123" key="GridCell.Tab.0.left" timestamp="1593148341685">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="84" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593092466968" />
-    <state width="1515" height="84" key="GridCell.Tab.0.right" timestamp="1593092466968">
+    <state width="1537" height="123" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593148341685" />
+    <state width="1537" height="123" key="GridCell.Tab.0.right" timestamp="1593148341685">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="84" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593092466968" />
+    <state width="1537" height="123" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593148341685" />
     <state x="277" y="55" key="SettingsEditor" timestamp="1593065302439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1593065302439" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1593091784612">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1593146822778">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1593091784612" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1593146822778" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1593070929048">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

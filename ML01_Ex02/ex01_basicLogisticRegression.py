@@ -64,6 +64,8 @@ def gradient(theta, X, y):
 
     parameters = int(theta.ravel().shape[1])
     grad = np.zeros(parameters)
+    # ravel（）返回的是视图，意味着改变元素的值会影响原始数组；
+    # flatten（）返回的是拷贝，意味着改变元素的值不会影响原始数组。
 
     error = sigmoid(X * theta.T) - y
 
@@ -76,11 +78,12 @@ def gradient(theta, X, y):
 ### STEP_03: Use library to calculate the final θ automatically; We don't have to set iters and learning rate ourselves;
 ### the function from library will bring the best answer directly
 
-import scipy.optimize as opt        # Use this library
+import scipy.optimize as opt        # Use this library to calculate theta_min
 result = opt.fmin_tnc(func=cost, x0=theta, fprime=gradient, args=(X, y))
 print(result)
 #NOTICE: func：优化的目标函数（此例中为代价函数); fprime：提供优化函数func的梯度函数，不然优化函数func必须返回函数值和梯度;
 # x0(array_like)：初值（此例中为θ); approx_grad :如果设置为True，会给出近似梯度; args：元组，是传递给优化函数的参数
+
 # 返回值: x(ndarray): The solution.
 # nfeval(int): The number of function evaluations.
 # rc(int): Return code, see below

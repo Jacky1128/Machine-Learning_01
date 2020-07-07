@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sb
 from scipy.io import loadmat
 
-### Target01: Apply K-means algorithm to a basic 2-D data set, then to use it to compress a image;
-### Target02: Apply PCA algorithm to find the lower dimention expression of Facial image;
+### Target01: Apply K-means algorithm to a basic 2-D data set, then to use it to compress a image;(降维)
+### Target02: Apply PCA algorithm to find the lower dimention expression of Facial image;(降维)
 
 ## T01_STEP01: Define a function to find the closest centroids and test it  (Minimize the c var in Distortion)
 # Find 每条数据距离哪个类中心最近, 即c(i)
@@ -99,8 +99,140 @@ plt.show()
 
 ## T01_STEP04: Use K-means in image compression
 ## Find the most typical colours then let the raw 24 kinds of colours reflect to lower colour dimentions
+##Image Compression understanding:
+##1. Raw image is 128*128 3通道，将图像的宽、高压缩到一个维度，保留通道数为一个维度，最终为16384*3的数据量;
+##2. 可以理解为这张图片一共有16384行数据，每行数据有3个特征;
+##3. 然后对这些数据设置16个簇（对于原始图片，可以理解为分成了16块），通过kmeans算法得到16各簇中心点,将这16384行数据设置所属对应簇;
+##4. 保存这张压缩图片，保存这16个簇中心数据，以及这16384行数数据对应类别即可，那么需要的数据量就是16384+16*3;
+
+#01_load the image data
 from IPython.display import Image       # Load the Image waiting for compression
 Image(filename='C:/Users/JackyWang28/Desktop/machine-learning-ex7/ex7/bird_small.png')
+
+# Load the Image data
+image_data = loadmat('C:/Users/JackyWang28/Desktop/machine-learning-ex7/ex7/bird_small.mat')
+print("The image data is: ",image_data)
+
+A = image_data['A']
+print("Shape of the matrix A in the image is: ",A.shape)        #  图像为128*128 3通道的图片
+plt.imshow(A)
+plt.show()
+
+#02_Data preprocessing
+# Normalize value ranges, because every data is between 0 and 255
+A = A / 255.
+
+# Reshape the array
+X = np.reshape(A, (A.shape[0] * A.shape[1], A.shape[2]))        # 重置矩阵大小，将行数和列数合并，通道为单独的一维
+print("Shape of the reshaped X is: ",X.shape)
+
+# Randomly initialize the centroids
+initial_centroids = init_centroids(X, 16)       # Artificially let K=16, means there are 16 cluters
+
+# Run the K-means algorithm
+idx, centroids = run_k_means(X, initial_centroids, 10)      # iterate 10 times
+
+# Get the closest centroids one last time
+idx = find_closest_centroids(X, centroids)
+
+# Map each pixel to the centroid value
+X_recovered = centroids[idx.astype(int),:]      # X_recover is the matrix uk that all xi indicate to
+print("Shape of X_recovered is: ",X_recovered.shape)
+# dtype 用于查看数据类型, astype 用于转换数据类型
+
+#03_Use kmeans module in scikit-learn package to compress the image
+# reshape to the original dimensions
+X_recovered = np.reshape(X_recovered, (A.shape[0], A.shape[1], A.shape[2]))
+print("Shape of the X after reshaped",X_recovered.shape)
+plt.imshow(X_recovered)
+plt.show()      # Compressed image with K-Means algorithm
+
+
+## T02: 01. Apply PCA into a simple 2-D data set in order to learn how it works;
+## 02. Apply PCA in a facial image. We can use smaller data to capture图像的“本质”;
+## T02_01:
+data = loadmat('C:/Users/JackyWang28/Desktop/machine-learning-ex7/ex7/ex7data1.mat')
+print("The 2-D data set is: ",data)
+
+X = data['X']       # Get data X
+# Visualize the data
+fig, ax = plt.subplots(figsize=(12,8))
+ax.scatter(X[:, 0], X[:, 1])
+plt.show()
+
+
+def pca(X):
+    # Mean Normalization of the features
+    X = (X - X.mean()) / X.std()
+
+    # Compute the covariance matrix
+    X = np.matrix(X)
+    cov = (X.T * X) / X.shape[0]
+
+    # Perform SVD in Library
+    U, S, V = np.linalg.svd(cov)
+    return U, S, V
+
+U, S, V = pca(X)
+print("The U matrix from PCA algorithm is: ",U)
+# We will just get the first kth because we want the image dimention reduce to k-D
+def project_data(X, U, k):
+    U_reduced = U[:,:k]
+    return np.dot(X, U_reduced)     # Calculate U_reduced 点乘 X
+
+Z = project_data(X, U, 1)       # Let k = 1
+print("Z from PCA algorithm is: ",Z)
+
+# We can also reconstructe the compressed data
+def recover_data(Z, U, k):
+    U_reduced = U[:,:k]
+    return np.dot(Z, U_reduced.T)       # # Calculate Z 点乘 U_reduced.T
+
+X_recovered = recover_data(Z, U, 1)
+print("The recovered X is: ",X_recovered)
+
+fig, ax = plt.subplots(figsize=(12,8))
+ax.scatter(list(X_recovered[:, 0]), list(X_recovered[:, 1]))
+plt.show()      # The recovered data X
+
+## T02_02: Apply the algorithm above in Facial image processing
+# 给出的数据集包括5000张人脸图像，每张图像的大小为32*32灰度；
+# 每一张图像的像素存储为1024维数值，数据集维度为 5000*1024；
+# 选取前100张图像即可
+faces = loadmat('C:/Users/JackyWang28/Desktop/machine-learning-ex7/ex7/ex7faces.mat')
+X = faces['X']
+print("Shape of faces_X is: ",X.shape)
+
+def plot_n_image(X, n):     # Define Visualization function, n is number of images showed
+    """ plot first n images
+    n has to be a square number(完全平方数)
+    """
+    pic_size = int(np.sqrt(X.shape[1]))     # np.sqrt(B):求B的开方
+    grid_size = int(np.sqrt(n))
+
+    first_n_images = X[:n, :]
+
+    fig, ax_array = plt.subplots(nrows=grid_size, ncols=grid_size,
+                                    sharey=True, sharex=True, figsize=(8, 8))
+
+    for r in range(grid_size):
+        for c in range(grid_size):
+            ax_array[r, c].imshow(first_n_images[grid_size * r + c].reshape((pic_size, pic_size)))
+            plt.xticks(np.array([]))
+            plt.yticks(np.array([]))
+
+plot_n_image(X, 100)
+plt.show()      # Show the first 100 images
+
+U, S, V = pca(X)
+Z = project_data(X, U, 100)     # Let k = 100
+X_recovered = recover_data(Z, U, 100)
+face = np.reshape(X_recovered[3,:], (32, 32))
+plt.imshow(face)
+plt.show()
+
+
+
 
 
 

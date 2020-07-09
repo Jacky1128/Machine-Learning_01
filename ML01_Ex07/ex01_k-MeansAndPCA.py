@@ -227,9 +227,16 @@ plt.show()      # Show the first 100 images
 U, S, V = pca(X)
 Z = project_data(X, U, 100)     # Let k = 100
 X_recovered = recover_data(Z, U, 100)
-face = np.reshape(X_recovered[3,:], (32, 32))
-plt.imshow(face)
-plt.show()
+# face = np.reshape(X_recovered[3,:], (32, 32))
+# plt.imshow(face)
+plot_n_image(X_recovered, 100)
+plt.show()      # Show the first 100 images been compressed
+
+# 我们读入的.mat文件画出来的是热量图，就是整体泛红，并不是期待的灰度图，
+# 这是因为图像的存储方式可能与 cv库读取的方式是相同的，用plt函数画出来的图他们的通道不同
+# 只需在其中一行代码中添加一个参数即可: 将 plot_n_image 函数的其中一行代码
+# ax_array[r, c].imshow(first_n_images[grid_size * r + c].reshape((32, 32))) 改为：
+# ax_array[r, c].imshow(first_n_images[grid_size * r + c].reshape((32, 32)),cmap='Greys_r')
 
 
 
